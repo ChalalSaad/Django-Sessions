@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .container{
+        display: inline-block;
+    }
+    .img{
+        width: 100px;
+        height: 100px;
+    }
+    .p{
+        width: 30%;
+    }
+</style>
+    <body>
+        <div class="container">
+    
+
+       <h1>shop page</h1>
+       {% for p in all_products %}
+       <img  class="img" src="{{p.image_url}}" alt="">
+           <a href="{% url 'detail-product' p.id %}"><h3>{{p.title}}</h3></a> 
+            <strong>{{p.price}}</strong>
+            <p>{{p.description}}</p>
+            
+        {%endfor%}
+        </div>
+    </body>
+</html>

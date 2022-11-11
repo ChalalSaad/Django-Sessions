@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .container{
+        display: inline-block;
+    }
+    .img{
+        width: 100px;
+        height: 100px;
+    }
+    .p{
+        width: 30%;
+    }
+</style>
+    <body>
+        <div class="container">
+    
+
+       <h1>shop page </h1>
+       
+       <img  class="img" src="{{product.image_url}}" alt="">
+           <a href=""><h3>{{product.title}}</h3></a> 
+            <strong>{{product.price}}</strong>
+            <p>{{product.description}}</p>
+            
+        </div>
+        <div>
+            <h4>last product viewed</h4>
+            {% for i in last_checked%}
+                <img src="{{i.image_url}}"  class="img" alt="">     
+                
+            {%endfor%}
+        </div>
+    </body>
+</html>
